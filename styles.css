@@ -60,3 +60,10 @@ main {
   margin-top: 1rem;
   list-style-type: none;
 }
+.controller-buttons {
+  margin-top: 0.5rem;
+}
+
+#start-button:disabled {
+  background-color: rgb(136, 26, 26);
+}

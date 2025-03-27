@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <title>NC Timer</title>
+    <script src="./script.js" defer></script>
   </head>
   <body>
     <header>
@@ -16,17 +17,35 @@
 
     <main>
       <section id="timer-controls">
-        <p>Remaining time: 0 seconds</p>
-        <button class="timer-control-button">+30s</button>
-        <button class="timer-control-button">Start</button>
+        <p>Remaining time: <span id="remaining-time">0</span> seconds</p>
+        <button class="timer-control-button add-time-button" value="5">
+          +5s
+        </button>
+        <button class="timer-control-button add-time-button" value="15">
+          +15s
+        </button>
+        <button class="timer-control-button add-time-button" value="30">
+          +30s
+        </button>
+        <div class="controller-buttons">
+          <button
+            class="timer-control-button"
+            id="start-button"
+            disabled="true"
+          >
+            Start
+          </button>
+          <button class="timer-control-button" id="reset-button">Reset</button>
+        </div>
       </section>
-      <section>
-        <h2 id="instructions">How to use the app</h2>
-        <p id="instructions">
-          You will need to click start to start the timer. It will have a
-          default of 3 minutes which is 180 seconds. Feel free to click the
-          button +30s to extend your timer.
+      <section id="instructions">
+        <h2>How to use the app</h2>
+        <p>
+          Set any number of minutes on the timer and click
+          <strong>Start</strong>
         </p>
+        <p>You can pause and resume at anytime</p>
+        <p>You can also reset the timer</p>
         <ul class="instructions-list">
           <li>Soft-boiled: 240 seconds</li>
           <li>Medium-boiled: 360 seconds</li>
